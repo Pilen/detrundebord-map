@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRmrHYLtQRYy31daGxjngnXBIlN9-N_dM&libraries=places" async defer></script>
+        <script src="bootstrap-filestyle.min.js"></script>
         <script src="jszip.js"></script>
         <script src="xlsx.js"></script>
         <script src="map.js"></script>
@@ -25,16 +26,23 @@
              text-align: center;
              position: absolute;
              left: 50%;
-             transform: translateX(-50%);
              top: 20%;
+             transform: translateX(-50%);
+         }
+         #form {
+             margin: 0;
+             padding: 0;
+             height: 100vh;
+             display: flex;
+             justify-content: center;
+             align-items: center;
          }
         </style>
     </head>
     <body>
         <div id="form">
-            <input type="file" name="excelfile" id="load" accept=".xlsx" class="btn btn-lg" autofocus/>
+            <input type="file" name="excelfile" id="load" accept=".xlsx" class="filestyle" data-input="false" data-buttonText="Læs fil" data-buttonName="btn-primary" data-size="lg" autofocus/>
         </div>
-        <!-- <div id="map"></div> -->
         <div id="map" style="visibility: hidden"></div>
         <div id="status" class="alert alert-success" style="display:none"></div>
     </body>
